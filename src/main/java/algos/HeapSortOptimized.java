@@ -1,6 +1,10 @@
 package algos;
 
-import java.util.Arrays;
+/**
+ * Max Heapify takes log n times, total heap sort takes n log n time as
+ * max heapify is called n times.
+ */
+
 import java.util.Scanner;
 
 public class HeapSortOptimized {
@@ -47,9 +51,8 @@ public class HeapSortOptimized {
             int temp = array[largest];
             array[largest] = array [n];
             array[n] = temp;
+            maxHeapify(largest);
         }
-        maxHeapify(left);
-        maxHeapify(right);
     }
 
 
